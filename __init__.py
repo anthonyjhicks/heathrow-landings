@@ -1,1 +1,1 @@
-"""heathrow-landings sensor integration"""
+"""heathrow landings sensor integration"""
