@@ -8,7 +8,7 @@
 
 Home Assistant sensors indicating the scheduled runways for the current week at 0600-1500, 1500 until last departure and night as published by London Heathrow Airport [Runway Alterations](https://www.heathrow.com/content/dam/heathrow/web/common/documents/company/local-community/noise/operations/runway-alternation/Runway_Alternation_Programme_2024.pdf).  Ideal for use if you live in the Heathrow flight path and want to know when aircraft are likely to be flying over your location for display on your Dashboard or perhaps linked to an automation. This Integration reads a static JSON file I converted from the Heathrow published PDFs of scheduled runway usage.  This schedule could change without me realising, so no promises this always up to date ;)
 
-I recommend combining this with my [Heathrow Arrival Rwy](http://github.com/anthonyjhicks/heathrow-arrivals) integration for a live sensor of the active Arrival runway according to the Heathrow (EGLL) ATIS, as this can sometimes vary from the scheduled runway due to operational reasons.
+I recommend combining this with my [Heathrow Arrivals](http://github.com/anthonyjhicks/heathrow-arrivals) integration for a live sensor of the active Arrival runway according to the Heathrow (EGLL) ATIS, as this can sometimes vary from the scheduled runway due to operational reasons.
 
 You could also add this superb [Home Assistant Flightradar24](https://github.com/AlexandrErohin/home-assistant-flightradar24) integration to count the number of aircraft flying over your location (combine it with the Utility Meter Helper to get the count range you need).
 
