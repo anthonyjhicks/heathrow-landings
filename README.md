@@ -1,5 +1,10 @@
 # Heathrow Landings
-[![hacs_badge](https://img.shields.io/badge/HACS-Default-orange.svg)](https://github.com/hacs/integration)
+[![GitHub Release][releases-shield]][releases]
+[![GitHub Activity][commits-shield]][commits]
+[![License][license-shield]](LICENSE)
+
+![Project Maintenance][maintenance-shield]
+[![BuyMeCoffee][buymecoffeebadge]][buymecoffee]
 
 Home Assistant sensors indicating the scheduled runways for the current week at 0600-1500, 1500 until last departure, and Night as published by London Heathrow Airport at [Runway Alterations](https://www.heathrow.com/content/dam/heathrow/web/common/documents/company/local-community/noise/operations/runway-alternation/Runway_Alternation_Programme_2024.pdf).  Ideal for use if you live in the Heathrow flight path and want to be to able to track when aircraft are likely to be flying over your location for display on your Dashboard or perhaps linked to an automation. This reads a static JSON file I converted from the Heathrow published PDFs of scheduled runway useage.  This schedule could change without me realising - no promises the static files are entirely up to date.
 
