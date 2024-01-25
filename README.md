@@ -29,7 +29,7 @@ Have [HACS](https://hacs.xyz/) installed, this will allow you to update easily.
 
 ## Configuration
 
-There is no configuration UI.  You must add the following to the sensor section of your configuration.yaml:
+There is no configuration UI.  You must add the following to the sensor section of your configuration.yaml and restart Home Assistant:
 
 ```markdown
 sensor:
