@@ -31,10 +31,12 @@ Have [HACS](https://hacs.xyz/) installed, this will allow you to update easily.
 
 There is no configuration UI.  You must add the following to the sensor section of your configuration.yaml:
 
-```
+```markdown
 sensor:
   - platform: heathrow_landings
 ```
+
+## Usage
 
 This will create three sensors:
 
