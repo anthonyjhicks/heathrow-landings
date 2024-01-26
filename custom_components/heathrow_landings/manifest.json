@@ -6,7 +6,7 @@
     "dependencies": [],
     "documentation": "https://github.com/anthonyjhicks/heathrow-landings",
     "iot_class": "local_polling",
-    "issues": "https://github.com/anthonyjhicks/heathrow-landings/issues",        
+    "issues_tracker": "https://github.com/anthonyjhicks/heathrow-landings/issues",
     "requirements": [],
     "version": "1.0"
 }
