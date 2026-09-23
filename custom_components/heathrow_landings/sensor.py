@@ -8,8 +8,8 @@ from homeassistant.components.sensor import SensorEntity
 
 # Constants
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
-LANDINGS_DAY_FILE = os.path.join(SCRIPT_DIR, "landings_day_2024.json")
-LANDINGS_NIGHT_FILE = os.path.join(SCRIPT_DIR, "landings_night_2024.json")
+LANDINGS_DAY_FILE = os.path.join(SCRIPT_DIR, "landings_day_2026.json")
+LANDINGS_NIGHT_FILE = os.path.join(SCRIPT_DIR, "landings_night_2026.json")
 
 
 # Base class for Heathrow sensors
