@@ -6,7 +6,7 @@
 ![Project Maintenance][maintenance-shield]
 [![BuyMeCoffee][buymecoffeebadge]][buymecoffee]
 
-Home Assistant sensors indicating the scheduled runways for the current week at 0600-1500, 1500 until last departure and night as published by London Heathrow Airport [Runway Alterations](https://www.heathrow.com/content/dam/heathrow/web/common/documents/company/local-community/noise/operations/runway-alternation/Runway_Alternation_Programme_2024.pdf).  Ideal for use if you live in the Heathrow flight path and want to know when aircraft are likely to be flying over your location for display on your Dashboard or perhaps linked to an automation. This Integration reads a static JSON file I converted from the Heathrow published PDFs of scheduled runway usage.  This schedule could change without me realising, so no promises this always up to date ;)
+Home Assistant sensors indicating the scheduled runways for the current week at 0600-1500, 1500 until last departure and night as published by London Heathrow Airport [Runway Alterations](https://www.heathrow.com/content/dam/heathrow/web/common/documents/company/local-community/noise/operations/runway-alternation/Runway_Alternation_Programme_2026.pdf).  Ideal for use if you live in the Heathrow flight path and want to know when aircraft are likely to be flying over your location for display on your Dashboard or perhaps linked to an automation. This Integration reads a static JSON file I converted from the Heathrow published PDFs of scheduled runway usage.  This schedule could change without me realising, so no promises this always up to date ;)
 
 I recommend combining this with my [Heathrow Arrivals](http://github.com/anthonyjhicks/heathrow-arrivals) integration for a live sensor of the active Arrival runway according to the Heathrow (EGLL) ATIS, as this can sometimes vary from the scheduled runway due to operational reasons.
 
@@ -47,9 +47,9 @@ This will create three sensors you can use in your Dashboards, Automations etc.
 
 | Entity | Name | State | Attributes |
 | -- | -- | -- | -- |
-| sensor.heathrow_landings_0600_1500 | Heathrow Landings 0600-1500 | 27L | friendly_name: Heathrow Landings 0600-1500 |
-| sensor.heathrow_landings_1500 | Heathrow Landings 1500 | 27R * |	friendly_name: Heathrow Landings 1500 | 
-| sensor.heathrow_night | Heathrow Night | 27L * | friendly_name: Heathrow Night |
+| sensor.heathrow_landings_0600_1500 | Heathrow Landings 0600-1500 | 27R | friendly_name: Heathrow Landings 0600-1500 |
+| sensor.heathrow_landings_1500 | Heathrow Landings 1500 | 27L |	friendly_name: Heathrow Landings 1500 | 
+| sensor.heathrow_night | Heathrow Night | 09R | friendly_name: Heathrow Night |
 
 ## Issues
 
