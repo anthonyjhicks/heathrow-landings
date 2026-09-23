@@ -24,7 +24,7 @@ RUNWAYS = {
 
 # Base class for Heathrow sensors
 class HeathrowSensorBase(SensorEntity):
-    _attr_icon = "mdi:airplane-landing"
+    _attr_icon = "mdi:airplane-clock"
     # Which column of the weekly schedule this sensor reports.
     _column = "Primary"
 
