@@ -84,7 +84,49 @@ The state is the runway code on its own, so you can compare it directly:
 {% endif %}
 ```
 
-The week rolls over on Monday. For the night schedule Heathrow also publishes a secondary runway — the same runway approached from the opposite direction, used when the weather doesn't suit the primary — and the sensor reports the primary.
+### Attributes
+
+Runway codes aren't friendly to read, so each sensor also carries the same information in plain terms:
+
+| Attribute | Example | Meaning |
+| -- | -- | -- |
+| `approach_from` | `east` | Which direction aircraft are arriving from |
+| `runway_position` | `northern` | Which of the two parallel runways is in use |
+| `week_commencing` | `21/09/2026` | The Monday this schedule applies from |
+| `next_week` | `27L` | What this sensor changes to on Monday |
+| `alternate_runway` | `27L` | Night sensor only — the secondary runway |
+
+So for "are they coming in over us first thing?", the attribute is usually what you want rather than the state:
+
+```jinja
+Landing from the {{ state_attr('sensor.heathrow_landings_0600_1500', 'approach_from') }}
+```
+
+A template sensor turning that into something you can drop straight on a Dashboard:
+
+```yaml
+template:
+  - sensor:
+      - name: Heathrow Morning Approach
+        state: >
+          {% set from = state_attr('sensor.heathrow_landings_0600_1500', 'approach_from') %}
+          {% if from == 'east' %}Over London, from the east
+          {% elif from == 'west' %}From the west
+          {% else %}Unknown{% endif %}
+        icon: >
+          {% set from = state_attr('sensor.heathrow_landings_0600_1500', 'approach_from') %}
+          {% if from == 'east' %}mdi:arrow-left-bold
+          {% elif from == 'west' %}mdi:arrow-right-bold
+          {% else %}mdi:help{% endif %}
+```
+
+### Why the value doesn't change through the day
+
+The programme is published per week, not per day, so all three sensors hold the same value from Monday through Sunday. Checking the 06:00-15:00 sensor at 16:00 shows you the runway that was used this morning — and the one that will be used tomorrow morning too, since it's the same week.
+
+The value only changes on Monday. If you want to know what's coming, that's what the `next_week` attribute is for.
+
+For the night schedule Heathrow also publishes a secondary runway — the same runway approached from the opposite direction, used when the weather doesn't suit the primary — and the sensor reports the primary, with the secondary in `alternate_runway`.
 
 ## Accuracy
 
